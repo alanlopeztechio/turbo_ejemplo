@@ -6,8 +6,7 @@
     "dev": "turbo run dev",
     "lint": "turbo run lint",
     "format": "prettier --write \"**/*.{ts,tsx,md}\"",
-    "check-types": "turbo run check-types",
-    "build:probando": "dotenv -- turbo run build --filter=api"
+    "check-types": "turbo run check-types"
   },
   "workspaces": [
     "apps/*",
@@ -18,7 +17,14 @@
     "turbo": "^2.5.6",
     "typescript": "5.9.2"
   },
-  "packageManager": "pnpm@9.0.0",
+  "packageManager": "pnpm@9.12.2",
+  "pnpm": {
+    "onlyBuiltDependencies": [
+      "sharp",
+      "esbuild",
+      "unrs-resolver"
+    ]
+  },
   "engines": {
     "node": ">=18"
   }
