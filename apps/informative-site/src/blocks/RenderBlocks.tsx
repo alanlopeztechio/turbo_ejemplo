@@ -14,6 +14,7 @@ const blockComponents = {
   cta: CallToActionBlock,
   formBlock: FormBlock,
   mediaBlock: MediaBlock,
+  acordeon: ArchiveBlock,
 }
 
 export const RenderBlocks: React.FC<{
