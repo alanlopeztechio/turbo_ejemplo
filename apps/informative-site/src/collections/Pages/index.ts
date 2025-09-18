@@ -75,7 +75,8 @@ export const Pages: CollectionConfig<'pages'> = {
             {
               name: 'layout',
               type: 'blocks',
-              blocks: [CallToAction, Content, MediaBlock, Archive, FormBlock],
+              blockReferences: ['archive', 'content', 'cta', 'formBlock', 'mediaBlock'],
+              blocks: [],
               required: true,
               admin: {
                 initCollapsed: true,

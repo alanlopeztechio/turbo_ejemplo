@@ -17,6 +17,11 @@ import { Header } from './Header/config'
 import { plugins } from './plugins'
 import { defaultLexical } from '@/fields/defaultLexical'
 import { getServerSideURL } from './utilities/getURL'
+import { CallToAction } from './blocks/CallToAction/config'
+import { Content } from './blocks/Content/config'
+import { MediaBlock } from './blocks/MediaBlock/config'
+import { Archive } from './blocks/ArchiveBlock/config'
+import { FormBlock } from './blocks/Form/config'
 
 const filename = fileURLToPath(import.meta.url)
 const dirname = path.dirname(filename)
@@ -66,6 +71,7 @@ export default buildConfig({
     },
   }),
   collections: [Pages, Posts, Media, Categories, Users],
+  blocks: [CallToAction, Content, MediaBlock, Archive, FormBlock],
   cors: [getServerSideURL()].filter(Boolean),
   globals: [Header, Footer],
   plugins: [
