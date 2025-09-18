@@ -71,6 +71,7 @@ export interface Config {
     mediaBlock: MediaBlock;
     archive: ArchiveBlock;
     formBlock: FormBlock;
+    acordeon: AcordeonBlock;
   };
   collections: {
     pages: Page;
@@ -739,6 +740,23 @@ export interface MediaBlock {
   id?: string | null;
   blockName?: string | null;
   blockType: 'mediaBlock';
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "AcordeonBlock".
+ */
+export interface AcordeonBlock {
+  titulo: string;
+  items?:
+    | {
+        titulo: string;
+        contenido: string;
+        id?: string | null;
+      }[]
+    | null;
+  id?: string | null;
+  blockName?: string | null;
+  blockType: 'acordeon';
 }
 /**
  * This interface was referenced by `Config`'s JSON-Schema
