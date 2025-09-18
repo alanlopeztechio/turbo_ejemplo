@@ -22,6 +22,7 @@ import { Content } from './blocks/Content/config'
 import { MediaBlock } from './blocks/MediaBlock/config'
 import { Archive } from './blocks/ArchiveBlock/config'
 import { FormBlock } from './blocks/Form/config'
+import { Acordeon } from './blocks/Acordeon/config'
 
 const filename = fileURLToPath(import.meta.url)
 const dirname = path.dirname(filename)
@@ -71,7 +72,7 @@ export default buildConfig({
     },
   }),
   collections: [Pages, Posts, Media, Categories, Users],
-  blocks: [CallToAction, Content, MediaBlock, Archive, FormBlock],
+  blocks: [CallToAction, Content, MediaBlock, Archive, FormBlock, Acordeon],
   cors: [getServerSideURL()].filter(Boolean),
   globals: [Header, Footer],
   plugins: [
