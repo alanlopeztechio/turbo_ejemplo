@@ -246,7 +246,7 @@ export interface Page {
       | null;
     media?: (number | null) | Media;
   };
-  layout: (ArchiveBlock | ContentBlock | CallToActionBlock | FormBlock | MediaBlock)[];
+  layout: (ArchiveBlock | ContentBlock | CallToActionBlock | FormBlock | MediaBlock | AcordeonBlock)[];
   meta?: {
     title?: string | null;
     /**

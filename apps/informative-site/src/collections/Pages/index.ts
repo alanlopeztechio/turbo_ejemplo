@@ -75,7 +75,7 @@ export const Pages: CollectionConfig<'pages'> = {
             {
               name: 'layout',
               type: 'blocks',
-              blockReferences: ['archive', 'content', 'cta', 'formBlock', 'mediaBlock'],
+              blockReferences: ['archive', 'content', 'cta', 'formBlock', 'mediaBlock', 'acordeon'],
               blocks: [],
               required: true,
               admin: {
